@@ -1,8 +1,8 @@
 export const MEMO_CONTENT_STYLE = {
   body: {
-    fontSize: 16,
-    lineHeight: 26,
-    paragraphSpacing: 8,
+    fontSize: 15,
+    lineHeight: 24,
+    paragraphSpacing: 6,
   },
   divider: {
     color: {

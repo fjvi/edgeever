@@ -168,7 +168,7 @@ export const AiPromptsPane = ({ onClose, onOpenExecutionCenter }: { onClose: () 
   const editorOpen = creating || Boolean(editing);
 
   return (
-    <div className="flex h-full min-h-0 min-w-0 flex-col bg-workspace-canvas">
+    <div className="flex h-full min-h-0 min-w-0 flex-col bg-slate-50/60">
       <header className="flex h-[calc(3.75rem+env(safe-area-inset-top))] shrink-0 items-end justify-between border-b border-slate-200/80 bg-card px-6 pb-3 pt-[env(safe-area-inset-top)] shadow-2xs lg:h-16 lg:items-center lg:pb-0 lg:pt-0">
         <div className="flex min-w-0 items-center gap-3">
           <TooltipProvider delayDuration={0}>
@@ -198,7 +198,7 @@ export const AiPromptsPane = ({ onClose, onOpenExecutionCenter }: { onClose: () 
             <div>
               <h2 className="flex items-center gap-2 text-sm font-bold text-slate-900">
                 <span>{t("aiPrompts.listTitle")}</span>
-                <span className="rounded-full bg-emerald-100/70 px-2 py-0.5 text-xs font-semibold text-emerald-800">
+                <span className="rounded-full bg-emerald-100/70 px-2 py-0.5 text-[11px] font-semibold text-emerald-800">
                   {prompts.length}
                 </span>
               </h2>
@@ -353,7 +353,7 @@ export const AiPromptsPane = ({ onClose, onOpenExecutionCenter }: { onClose: () 
                     <div className="flex min-w-0 items-center gap-2">
                       <h3 className="truncate text-sm font-semibold text-slate-900">{prompt.name}</h3>
                       {prompt.origin === "default" ? (
-                        <span className="shrink-0 rounded-full bg-slate-100 px-1.5 py-0.5 text-xs font-medium text-slate-500">
+                        <span className="shrink-0 rounded-full bg-slate-100 px-1.5 py-0.5 text-[10px] font-medium text-slate-500">
                           {t("aiPrompts.defaultBadge")}
                         </span>
                       ) : null}
@@ -361,7 +361,7 @@ export const AiPromptsPane = ({ onClose, onOpenExecutionCenter }: { onClose: () 
                     <p className="mt-2 line-clamp-3 text-xs leading-5 text-slate-500">
                       {prompt.description || prompt.instruction}
                     </p>
-                    <p className="mt-2 text-xs text-slate-400">{formatDateTime(prompt.updatedAt)}</p>
+                    <p className="mt-2 text-[11px] text-slate-400">{formatDateTime(prompt.updatedAt)}</p>
                   </div>
                   <div className="mt-4 flex flex-wrap gap-1.5">
                     <Button

@@ -7,9 +7,8 @@ const settingsPaneSource = readFileSync(new URL("./SettingsPane.tsx", import.met
 describe("system information access", () => {
   test("keeps a compact-workspace entry in the editor overflow menu", () => {
     expect(headerActionsSource).toMatch(
-      /<DropdownMenuItem[\s\S]*?handleSystemInfoOpenChange\(true\)[\s\S]*?systemInfo\.title[\s\S]*?<\/DropdownMenuItem>/,
+      /<DropdownMenuItem[\s\S]*?min-\[1600px\]:hidden[\s\S]*?handleSystemInfoOpenChange\(true\)[\s\S]*?systemInfo\.title[\s\S]*?<\/DropdownMenuItem>/,
     );
-    expect(headerActionsSource).not.toContain("min-[1600px]:inline-flex");
   });
 
   test("does not duplicate the entry in desktop settings", () => {
